@@ -189,10 +189,10 @@ function App() {
                   alt="Healthcare Revenue Management Dashboard"
                   className="rounded-2xl shadow-2xl border-8 border-white"
                 />
-                <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-gray-100 animate-float">
+                <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-xl shadow-xl border border-gray-100">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                      <CheckCircle className="w-7 h-7 text-green-600" />
+                      <CheckCircle className="w-6 h-6 text-green-600" />
                     </div>
                     <div>
                       <p className="text-2xl font-bold text-green-600">96.9%</p>
@@ -200,10 +200,10 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute -top-6 -right-6 bg-white p-4 rounded-xl shadow-xl border border-gray-100 animate-float" style={{animationDelay: '1s'}}>
+                <div className="absolute -top-4 -right-4 bg-white p-5 rounded-xl shadow-xl border border-gray-100">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                      <Zap className="w-7 h-7 text-blue-600" />
+                      <Zap className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
                       <p className="text-2xl font-bold text-blue-600">30%</p>
@@ -261,48 +261,6 @@ function App() {
               </div>
             </div>
 
-            {/* Partner Logos Scrolling Section */}
-            <div className="mt-12" data-animate="fade-in" style={{transitionDelay: '0.4s'}}>
-              <p className="text-center text-sm font-semibold text-gray-500 uppercase tracking-wider mb-6">
-                Trusted by Leading Healthcare Systems
-              </p>
-              <div className="relative overflow-hidden">
-                <div className="logo-scroll-wrapper">
-                  <div className="logo-scroll-content">
-                    {['Memorial Health', 'City Hospital', 'Regional Medical', 'Valley Clinic', 'Premier Care', 'Unity Health', 'Coastal Med', 'Summit Hospital'].map((name, i) => (
-                      <div key={i} className="logo-item flex-shrink-0 mx-8">
-                        <img
-                          className="h-12 opacity-40 grayscale hover:opacity-70 hover:grayscale-0 transition-all duration-300"
-                          src={`https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?w=150&h=50&fit=crop`}
-                          alt={name}
-                          style={{
-                            filter: 'brightness(1.2) contrast(0.8)',
-                            mixBlendMode: 'multiply'
-                          }}
-                        />
-                        <p className="text-xs text-center mt-2 text-gray-500 font-medium">{name}</p>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="logo-scroll-content" aria-hidden="true">
-                    {['Memorial Health', 'City Hospital', 'Regional Medical', 'Valley Clinic', 'Premier Care', 'Unity Health', 'Coastal Med', 'Summit Hospital'].map((name, i) => (
-                      <div key={i} className="logo-item flex-shrink-0 mx-8">
-                        <img
-                          className="h-12 opacity-40 grayscale hover:opacity-70 hover:grayscale-0 transition-all duration-300"
-                          src={`https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?w=150&h=50&fit=crop`}
-                          alt={name}
-                          style={{
-                            filter: 'brightness(1.2) contrast(0.8)',
-                            mixBlendMode: 'multiply'
-                          }}
-                        />
-                        <p className="text-xs text-center mt-2 text-gray-500 font-medium">{name}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -345,7 +303,7 @@ function App() {
                   <Clock className="w-8 h-8" />
                 </div>
                 <h3 className="mt-6 text-5xl font-extrabold text-amber-600">
-                  <span className="count-up" data-target="45">0</span>+
+                  <span className="count-up" data-target="45">0</span>
                 </h3>
                 <p className="mt-3 text-xl font-bold text-gray-900">Days in A/R</p>
                 <p className="mt-3 text-gray-600 leading-relaxed">Complex billing and slow patient payments create a financial bottleneck, straining operations and limiting growth.</p>
@@ -402,9 +360,9 @@ function App() {
             </p>
           </div>
 
-          <div className="mt-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div className="lg:sticky top-24 h-full" data-animate="slide-in-left">
-              <div className="space-y-16">
+          <div className="mt-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="lg:sticky top-24 self-start" data-animate="slide-in-left">
+              <div className="space-y-16 flex flex-col justify-center min-h-[500px]">
                 <div ref={el => scrollyTextRefs.current[0] = el} className="scrolly-text p-8 rounded-2xl" data-step="1">
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-red-100 rounded-full mb-4">
                     <AlertCircle className="w-4 h-4 text-red-600" />
@@ -474,7 +432,7 @@ function App() {
               </div>
             </div>
 
-            <div className="relative space-y-16" data-animate="slide-in-right">
+            <div className="relative flex flex-col justify-center space-y-16" data-animate="slide-in-right">
               <div ref={el => scrollyUiRefs.current[0] = el} data-step="1" className="scrolly-ui h-auto min-h-[500px] flex items-center justify-center bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-2xl p-8 border-2 border-gray-200">
                 <div className="scrolly-ui-content w-full">
                   <div className="flex items-center gap-3 mb-6">
@@ -782,7 +740,7 @@ function App() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-200 rounded-full blur-3xl opacity-20"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="bg-gradient-to-br from-white to-blue-50 p-12 sm:p-16 rounded-3xl shadow-2xl border border-blue-100" data-animate="fade-in">
               <div className="text-center">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 rounded-full mb-6">
@@ -809,7 +767,7 @@ function App() {
                 </div>
 
                 <div className="mt-10 pt-10 border-t border-gray-200">
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-sm max-w-4xl mx-auto">
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                       <div className="text-left">
