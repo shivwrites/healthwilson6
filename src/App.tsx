@@ -153,6 +153,16 @@ function App() {
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50 rounded-full blur-3xl opacity-60"></div>
           <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-green-50 rounded-full blur-3xl opacity-50"></div>
+
+          {/* Wave Animation */}
+          <div className="wave-container">
+            <svg className="wave" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+              <path fill="rgba(59, 130, 246, 0.05)" fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,144C960,149,1056,139,1152,122.7C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+            <svg className="wave wave-2" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+              <path fill="rgba(34, 197, 94, 0.04)" fillOpacity="1" d="M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,144C672,149,768,203,864,208C960,213,1056,171,1152,154.7C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+          </div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -205,47 +215,44 @@ function App() {
             </div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto" data-animate="fade-in" style={{transitionDelay: '0.4s'}}>
-              <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border border-gray-100 hover:border-blue-200">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-t-2xl"></div>
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
-                    <CheckCircle className="w-7 h-7 text-white" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto" data-animate="fade-in" style={{transitionDelay: '0.4s'}}>
+              <div className="group relative bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all border border-gray-100">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <div className="text-4xl font-extrabold text-gray-900">96.9%</div>
-                    <div className="text-sm font-medium text-gray-500">First Pass Rate</div>
+                    <div className="text-3xl font-extrabold text-gray-900">96.9%</div>
+                    <div className="text-xs font-medium text-gray-500">First Pass Rate</div>
                   </div>
                 </div>
-                <p className="text-sm text-gray-600">Industry-leading clean claim submission rate</p>
+                <p className="text-xs text-gray-600">Industry-leading clean claim submission rate</p>
               </div>
 
-              <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border border-gray-100 hover:border-green-200">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-600 to-green-400 rounded-t-2xl"></div>
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
-                    <Zap className="w-7 h-7 text-white" />
+              <div className="group relative bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all border border-gray-100">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
+                    <Zap className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <div className="text-4xl font-extrabold text-gray-900">30%</div>
-                    <div className="text-sm font-medium text-gray-500">Faster Payments</div>
+                    <div className="text-3xl font-extrabold text-gray-900">30%</div>
+                    <div className="text-xs font-medium text-gray-500">Faster Payments</div>
                   </div>
                 </div>
-                <p className="text-sm text-gray-600">Average reduction in payment cycle time</p>
+                <p className="text-xs text-gray-600">Average reduction in payment cycle time</p>
               </div>
 
-              <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border border-gray-100 hover:border-orange-200">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-600 to-orange-400 rounded-t-2xl"></div>
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
-                    <Clock className="w-7 h-7 text-white" />
+              <div className="group relative bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all border border-gray-100">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
+                    <Clock className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <div className="text-4xl font-extrabold text-gray-900">31</div>
-                    <div className="text-sm font-medium text-gray-500">Days in A/R</div>
+                    <div className="text-3xl font-extrabold text-gray-900">31</div>
+                    <div className="text-xs font-medium text-gray-500">Days in A/R</div>
                   </div>
                 </div>
-                <p className="text-sm text-gray-600">Average accounts receivable turnover time</p>
+                <p className="text-xs text-gray-600">Average accounts receivable turnover time</p>
               </div>
             </div>
           </div>
