@@ -27,10 +27,81 @@
     }
   }
 
+  /* Floating Animation */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Logo Scroll Animation */
+  .logo-scroll-wrapper {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 0;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .logo-scroll-content {
+    display: flex;
+    align-items: center;
+    animation: scroll-logos 40s linear infinite;
+  }
+
+  .logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+  }
+
+  @keyframes scroll-logos {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .logo-scroll-wrapper:hover .logo-scroll-content {
+    animation-play-state: paused;
+  }
+
+  /* Slow Pulse Animation */
+  .animate-pulse-slow {
+    animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.95;
+    }
+  }
+
   /* Scrolly-telling active state */
+  .scrolly-text {
+    opacity: 0.5;
+    transform: scale(0.98);
+    transition: all 0.4s ease-out;
+  }
+
   .scrolly-text.active {
+    opacity: 1;
     color: #2563EB;
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 
   /* Scroll-triggered Animations */
