@@ -149,75 +149,106 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-white to-green-50 pt-24 pb-32 sm:pt-32 sm:pb-40 overflow-hidden">
+      <section className="relative bg-white pt-16 pb-24 sm:pt-20 sm:pb-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50 rounded-full blur-3xl opacity-60"></div>
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-green-50 rounded-full blur-3xl opacity-50"></div>
+        </div>
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm border border-blue-100 mb-6" data-animate="fade-in">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium text-gray-700">AI-Powered Revenue Cycle Management</span>
+          <div className="max-w-7xl mx-auto">
+            {/* Main Content */}
+            <div className="text-center max-w-4xl mx-auto mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-50 to-green-50 rounded-full border border-blue-100 mb-6" data-animate="fade-in">
+                <Zap className="w-4 h-4 text-blue-600" />
+                <span className="text-sm font-semibold text-gray-700">AI-Powered Revenue Cycle Management</span>
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight" data-animate="slide-in-up">
-                Stop Revenue Leakage. <span className="text-blue-600">Get Paid 30% Faster.</span>
+
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gray-900 tracking-tight leading-[1.1] mb-8" data-animate="slide-in-up">
+                Transform Your Revenue Cycle with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">Intelligent Automation</span>
               </h1>
-              <p className="mt-6 text-lg sm:text-xl text-gray-600 leading-relaxed" data-animate="slide-in-up" style={{transitionDelay: '0.2s'}}>
-                Healthclarified is the unified AI platform that prevents denials, automates your billing cycle, and gives you a clear, real-time view of your financial health.
+
+              <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed mb-12 max-w-3xl mx-auto" data-animate="slide-in-up" style={{transitionDelay: '0.1s'}}>
+                Prevent denials before they happen, accelerate payments by 30%, and gain complete visibility into your financial operations.
               </p>
-              <div className="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4">
-                <a href="#demo" className="w-full sm:w-auto text-base font-semibold text-white bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-2xl transform hover:-translate-y-1 pulse-cta" data-animate="slide-in-up" style={{transitionDelay: '0.4s'}}>
-                  Book Your Personalized Demo
+
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-10" data-animate="slide-in-up" style={{transitionDelay: '0.2s'}}>
+                <a href="#demo" className="group w-full sm:w-auto text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-10 py-5 rounded-xl transition-all shadow-lg hover:shadow-2xl inline-flex items-center justify-center gap-2">
+                  Book Your Demo
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
                 </a>
-                <a href="#" className="w-full sm:w-auto text-base font-semibold text-blue-600 bg-white hover:bg-blue-50 px-8 py-4 rounded-xl transition-all border-2 border-blue-200 shadow-sm hover:shadow-lg transform hover:-translate-y-1" data-animate="slide-in-up" style={{transitionDelay: '0.5s'}}>
-                  See 2-Min Platform Tour
+                <a href="#" className="w-full sm:w-auto text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 px-10 py-5 rounded-xl transition-all border-2 border-gray-300 shadow-sm hover:shadow-md inline-flex items-center justify-center gap-2">
+                  Watch Platform Tour
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                 </a>
               </div>
-              <div className="mt-8 flex flex-wrap justify-center lg:justify-start items-center gap-6 text-sm text-gray-600" data-animate="fade-in" style={{transitionDelay: '0.6s'}}>
+
+              <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-600" data-animate="fade-in" style={{transitionDelay: '0.3s'}}>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-green-500" />
                   <span>No credit card required</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span>Setup in days, not months</span>
+                  <span>Setup in 72 hours</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span>Free migration support</span>
                 </div>
               </div>
             </div>
-            <div className="relative" data-animate="slide-in-right" style={{transitionDelay: '0.3s'}}>
-              <div className="relative">
-                <img
-                  src="https://images.pexels.com/photos/6237/pen-calendar-to-do-checklist.jpg?w=800&h=600&fit=crop"
-                  alt="Healthcare Revenue Management Dashboard"
-                  className="rounded-2xl shadow-2xl border-8 border-white"
-                />
-                <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-xl shadow-xl border border-gray-100">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                      <CheckCircle className="w-6 h-6 text-green-600" />
-                    </div>
-                    <div>
-                      <p className="text-2xl font-bold text-green-600">96.9%</p>
-                      <p className="text-xs text-gray-500 font-medium">First Pass Rate</p>
-                    </div>
+
+            {/* Stats Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto" data-animate="fade-in" style={{transitionDelay: '0.4s'}}>
+              <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border border-gray-100 hover:border-blue-200">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-t-2xl"></div>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+                    <CheckCircle className="w-7 h-7 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-4xl font-extrabold text-gray-900">96.9%</div>
+                    <div className="text-sm font-medium text-gray-500">First Pass Rate</div>
                   </div>
                 </div>
-                <div className="absolute -top-4 -right-4 bg-white p-5 rounded-xl shadow-xl border border-gray-100">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                      <Zap className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <p className="text-2xl font-bold text-blue-600">30%</p>
-                      <p className="text-xs text-gray-500 font-medium">Faster Payments</p>
-                    </div>
+                <p className="text-sm text-gray-600">Industry-leading clean claim submission rate</p>
+              </div>
+
+              <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border border-gray-100 hover:border-green-200">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-600 to-green-400 rounded-t-2xl"></div>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
+                    <Zap className="w-7 h-7 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-4xl font-extrabold text-gray-900">30%</div>
+                    <div className="text-sm font-medium text-gray-500">Faster Payments</div>
                   </div>
                 </div>
+                <p className="text-sm text-gray-600">Average reduction in payment cycle time</p>
+              </div>
+
+              <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border border-gray-100 hover:border-orange-200">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-600 to-orange-400 rounded-t-2xl"></div>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
+                    <Clock className="w-7 h-7 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-4xl font-extrabold text-gray-900">31</div>
+                    <div className="text-sm font-medium text-gray-500">Days in A/R</div>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-600">Average accounts receivable turnover time</p>
               </div>
             </div>
           </div>
-        </div>
-        <div className="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-          <div className="absolute left-1/4 top-0 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-blue-200 rounded-full opacity-20 blur-3xl"></div>
-          <div className="absolute right-1/4 bottom-0 translate-x-1/2 translate-y-1/2 w-[40rem] h-[40rem] bg-green-200 rounded-full opacity-20 blur-3xl"></div>
         </div>
       </section>
 
