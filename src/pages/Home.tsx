@@ -118,19 +118,12 @@ function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-10" data-animate="slide-in-up" style={{transitionDelay: '0.2s'}}>
-                <button disabled className="w-full sm:w-auto text-base font-semibold text-gray-500 bg-gray-300 px-10 py-5 rounded-xl inline-flex items-center justify-center gap-2 cursor-not-allowed">
-                  Service Discontinued
+                <Link to="/book-demo" className="w-full sm:w-auto text-base font-semibold text-white bg-blue-600 hover:bg-blue-700 px-10 py-5 rounded-xl inline-flex items-center justify-center gap-2 transition-all shadow-lg hover:shadow-xl pulse-cta">
+                  Schedule a Demo
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                </button>
-                <a href="#" className="w-full sm:w-auto text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 px-10 py-5 rounded-xl transition-all border-2 border-gray-300 shadow-sm hover:shadow-md inline-flex items-center justify-center gap-2">
-                  View Portfolio
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </a>
+                </Link>
               </div>
 
               <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-600" data-animate="fade-in" style={{transitionDelay: '0.3s'}}>
@@ -728,15 +721,18 @@ function Home() {
                 </p>
 
                 <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-                  <button disabled className="w-full sm:w-auto text-lg font-semibold text-gray-500 bg-gray-300 px-10 py-4 rounded-xl inline-flex items-center justify-center gap-3 cursor-not-allowed">
-                    <span>Service No Longer Available</span>
+                  <Link to="/book-demo" className="w-full sm:w-auto text-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 px-10 py-4 rounded-xl inline-flex items-center justify-center gap-3 transition-all shadow-lg hover:shadow-xl pulse-cta">
+                    <span>Schedule a Demo</span>
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
-                  </button>
-                  <a href="#" className="w-full sm:w-auto text-lg font-semibold text-blue-600 bg-white hover:bg-gray-50 px-8 py-4 rounded-xl transition-all border-2 border-blue-200 shadow-sm hover:shadow-lg transform hover:-translate-y-1">
-                    View Case Studies
-                  </a>
+                  </Link>
+                  <Link to="/login" className="w-full sm:w-auto text-lg font-semibold text-blue-600 bg-white hover:bg-gray-50 px-10 py-4 rounded-xl transition-all border-2 border-blue-200 shadow-sm hover:shadow-lg transform hover:-translate-y-1 inline-flex items-center justify-center gap-2">
+                    <span>Sign Up</span>
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </Link>
                 </div>
 
                 <div className="mt-10 pt-10 border-t border-gray-200">
