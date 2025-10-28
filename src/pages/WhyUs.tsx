@@ -18,9 +18,9 @@ function WhyUs() {
               AI-powered automation with human expertise to deliver results that matter—faster payments, fewer denials, and complete transparency.
             </p>
             <div className="mt-10 flex justify-center">
-              <a href="#demo" className="text-base font-medium text-white bg-teal-600 hover:bg-teal-700 px-8 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl">
+              <Link to="/book-demo" className="text-base font-medium text-white bg-teal-600 hover:bg-teal-700 px-8 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl">
                 Book Your Personalized Demo
-              </a>
+              </Link>
             </div>
           </div>
         </div>

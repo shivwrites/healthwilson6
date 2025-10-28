@@ -18,9 +18,9 @@ function BillingCompanies() {
               Multi-tenant platform for managing multiple clients, scale operations, and grow your business efficiently.
             </p>
             <div className="mt-10 flex justify-center">
-              <a href="#demo" className="text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 px-8 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl">
+              <Link to="/book-demo" className="text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 px-8 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl">
                 Book Your Personalized Demo
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -18,9 +18,9 @@ function BillingDenials() {
               Prevent 90% of claim denials before submission, accelerate payment processing, and automatically work denied claims to recover revenue.
             </p>
             <div className="mt-10 flex justify-center">
-              <a href="#demo" className="text-base font-medium text-white bg-red-600 hover:bg-red-700 px-8 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl">
+              <Link to="/book-demo" className="text-base font-medium text-white bg-red-600 hover:bg-red-700 px-8 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl">
                 Book Your Personalized Demo
-              </a>
+              </Link>
             </div>
           </div>
         </div>

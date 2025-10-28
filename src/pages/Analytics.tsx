@@ -18,9 +18,9 @@ function Analytics() {
               Real-time dashboards, predictive analytics, and actionable insights to drive data-driven revenue cycle decisions.
             </p>
             <div className="mt-10 flex justify-center">
-              <a href="#demo" className="text-base font-medium text-white bg-sky-600 hover:bg-sky-700 px-8 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl">
+              <Link to="/book-demo" className="text-base font-medium text-white bg-sky-600 hover:bg-sky-700 px-8 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl">
                 Book Your Personalized Demo
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -18,9 +18,9 @@ function Hospitals() {
               Scale with your organization, supporting multiple facilities, departments, and thousands of providers.
             </p>
             <div className="mt-10 flex justify-center">
-              <a href="#demo" className="text-base font-medium text-white bg-purple-600 hover:bg-purple-700 px-8 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl">
+              <Link to="/book-demo" className="text-base font-medium text-white bg-purple-600 hover:bg-purple-700 px-8 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl">
                 Book Your Personalized Demo
-              </a>
+              </Link>
             </div>
           </div>
         </div>
