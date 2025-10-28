@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { CheckCircle, Stethoscope, FileCode, Award, Clock, Users, DollarSign, ClipboardCheck } from 'lucide-react';
 
 function SpecialtyClinics() {
@@ -281,12 +282,12 @@ function SpecialtyClinics() {
                 Experience how Health Clarified helps specialty practices maximize reimbursement and streamline operations.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <button className="px-8 py-4 bg-white text-green-600 font-bold rounded-lg hover:bg-green-50 transition-colors shadow-lg">
+                <Link to="/book-demo" className="px-8 py-4 bg-white text-green-600 font-bold rounded-lg hover:bg-green-50 transition-colors shadow-lg text-center">
                   Schedule a Demo
-                </button>
-                <button className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+                </Link>
+                <Link to="/contact" className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors text-center">
                   Contact Sales
-                </button>
+                </Link>
               </div>
             </div>
           </div>

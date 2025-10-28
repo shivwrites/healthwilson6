@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { CheckCircle, Users, BarChart3, Zap, TrendingUp, Shield, Clock, Building2 } from 'lucide-react';
 
 function BillingCompanies() {
@@ -278,12 +279,12 @@ function BillingCompanies() {
                 Discover how Health Clarified helps RCM companies grow efficiently and deliver exceptional client service.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <button className="px-8 py-4 bg-white text-indigo-600 font-bold rounded-lg hover:bg-indigo-50 transition-colors shadow-lg">
+                <Link to="/book-demo" className="px-8 py-4 bg-white text-indigo-600 font-bold rounded-lg hover:bg-indigo-50 transition-colors shadow-lg text-center">
                   Schedule a Demo
-                </button>
-                <button className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+                </Link>
+                <Link to="/contact" className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors text-center">
                   Contact Sales
-                </button>
+                </Link>
               </div>
             </div>
           </div>

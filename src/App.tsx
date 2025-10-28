@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import ClientLogin from './pages/ClientLogin';
 import ForgotPassword from './pages/ForgotPassword';
+import BookDemo from './pages/BookDemo';
 import PatientAccess from './pages/PatientAccess';
 import MidCycle from './pages/MidCycle';
 import BillingDenials from './pages/BillingDenials';
@@ -41,6 +42,7 @@ function AppContent() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<ClientLogin />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/book-demo" element={<BookDemo />} />
           
           {/* Platform routes */}
           <Route path="/platform/patient-access" element={<PatientAccess />} />

@@ -44,7 +44,7 @@ function Navigation() {
 
           <div className="hidden md:flex items-center space-x-3">
             <Link to="/login" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">Client Login</Link>
-            <a href="#demo" className="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-all">Book a Demo</a>
+            <Link to="/book-demo" className="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-all">Book a Demo</Link>
           </div>
 
           <div className="md:hidden flex items-center">
@@ -73,7 +73,7 @@ function Navigation() {
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
             <div className="flex flex-col items-start px-5 space-y-3">
-              <a href="#demo" className="w-full text-center text-base font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-all">Book a Demo</a>
+              <Link to="/book-demo" className="w-full text-center text-base font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-all">Book a Demo</Link>
               <Link to="/login" className="w-full text-center text-base font-medium text-gray-600 hover:bg-gray-100 px-4 py-2 rounded-lg">Client Login</Link>
             </div>
           </div>
