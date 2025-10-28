@@ -39,7 +39,7 @@ function Navigation() {
               </div>
             </div>
             <Link to="/why-us" className="text-gray-600 hover:text-blue-600 transition-colors py-2 rounded-md text-sm font-medium">Why Us?</Link>
-            <Link to="/resources" className="text-gray-600 hover:text-blue-600 transition-colors py-2 rounded-md text-sm font-medium">Resources</Link>
+            <Link to="/resources" className="text-gray-600 hover:text-blue-600 transition-colors py-2 rounded-md text-sm font-medium">Success Stories</Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-3">
@@ -69,7 +69,7 @@ function Navigation() {
             <Link to="/solutions/specialty-clinics" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Specialty Clinics</Link>
             <Link to="/solutions/billing-companies" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Billing Companies</Link>
             <Link to="/why-us" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Why Us?</Link>
-            <Link to="/resources" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Resources</Link>
+            <Link to="/resources" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Success Stories</Link>
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
             <div className="flex flex-col items-start px-5 space-y-3">
