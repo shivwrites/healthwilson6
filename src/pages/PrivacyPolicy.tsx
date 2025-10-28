@@ -1,6 +1,32 @@
-import { CheckCircle, Eye, Lock, FileText, UserCheck, Shield, Database } from 'lucide-react';
+import { useState } from 'react';
+import { CheckCircle, Eye, Lock, FileText, UserCheck, Shield, Database, Loader2, X, Send } from 'lucide-react';
 
 function PrivacyPolicy() {
+  const [showForm, setShowForm] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleContactClick = () => {
+    setShowForm(true);
+  };
+
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setShowForm(false);
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      setShowSuccess(true);
+      setEmail('');
+      setMessage('');
+      setTimeout(() => {
+        setShowSuccess(false);
+      }, 5000);
+    }, 2000);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
       {/* Hero Section */}
@@ -17,9 +43,12 @@ function PrivacyPolicy() {
               We're committed to protecting your privacy and maintaining the highest standards of data protection in compliance with HIPAA, HITRUST, and other applicable regulations.
             </p>
             <div className="mt-10 flex justify-center">
-              <a href="#demo" className="text-base font-medium text-white bg-amber-600 hover:bg-amber-700 px-8 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl">
+              <button 
+                onClick={handleContactClick}
+                className="text-base font-medium text-white bg-amber-600 hover:bg-amber-700 px-8 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl"
+              >
                 Contact Privacy Team
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -307,6 +336,123 @@ function PrivacyPolicy() {
           </div>
         </div>
       </section>
+
+      {/* Form Modal */}
+      {showForm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl shadow-xl max-w-2xl w-full p-8 relative">
+            <button
+              onClick={() => setShowForm(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900">Contact Privacy Team</h3>
+              <p className="text-gray-600">
+                Have questions about our privacy policy? Fill out the form below and we'll get back to you shortly.
+              </p>
+
+              <form onSubmit={handleFormSubmit} className="space-y-4">
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Your Message
+                  </label>
+                  <textarea
+                    id="message"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
+                    rows={6}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent resize-none"
+                    placeholder="Please describe your inquiry..."
+                  />
+                </div>
+
+                <div className="flex gap-4 pt-4">
+                  <button
+                    type="button"
+                    onClick={() => setShowForm(false)}
+                    className="flex-1 px-6 py-3 border border-gray-300 rounded-lg font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    className="flex-1 px-6 py-3 bg-amber-600 text-white rounded-lg font-medium hover:bg-amber-700 transition-colors flex items-center justify-center gap-2"
+                  >
+                    <Send className="w-5 h-5" />
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Loading Modal */}
+      {isLoading && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-8">
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
+                <Loader2 className="w-8 h-8 text-blue-600 animate-spin" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">Processing Your Request</h3>
+              <p className="text-gray-700">
+                Please wait while we process your request...
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Success Modal */}
+      {showSuccess && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-8 relative">
+            <button
+              onClick={() => setShowSuccess(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
+                <CheckCircle className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">Request Received!</h3>
+              <p className="text-gray-700">
+                Thank you for reaching out. We have received your privacy inquiry and one of our team members will connect with you shortly.
+              </p>
+              <button
+                onClick={() => setShowSuccess(false)}
+                className="w-full bg-amber-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-amber-700 transition-colors"
+              >
+                Got it
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );
